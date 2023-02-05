@@ -1,45 +1,57 @@
+.b-main{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
 .bubble1{
-  height: 70vh;
-  width: 70vh;
+  height: 700px;
+  width: 700px;
   background: radial-gradient(rgba(7, 89, 133, 0.25) 0%, transparent 70%);
   border-radius: 50%;
   position: absolute;
-  bottom: 0px;
+  top: 20%;
   left: 0px;
   animation: move 15s linear infinite;
+  overflow-x: hidden;
 }
 
 .bubble2{
-  height: 50vh;
-  width: 50vh;
+  height: 500px;
+  width: 500px;
   background: radial-gradient(rgba(139, 92, 246, 0.25) 0%, transparent 70%);
   border-radius: 50%;
   position: absolute;
   top: 0px;
   right: 400px;
   animation: secondMove 15s linear infinite;
+  overflow-x: hidden;
 }
 
 .bubble3{
-  height: 60vh;
-  width: 60vh;
+  height: 600px;
+  width: 600px;
   background: radial-gradient(rgba(49, 46, 129, 0.25) 0%, transparent 70%);
   border-radius: 50%;
   position: absolute;
   top: 200px;
   right: 30px;
-  animation: thirdMove 15s linear infinite;
+  animation: thirdMove 10s linear infinite;
+  overflow-x: hidden;
 }
 
 .background{
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
   backdrop-filter: blur(10px);
+  position: relative;
+  overflow-x: hidden;
 }
 
 @keyframes move {
@@ -75,5 +87,17 @@
   }
   100%{
     transform: translate(0, 0);
+  }
+}
+
+@media screen and (max-width: 768px){
+  .bubble1{
+    display: none;
+  }
+  .bubble2{
+    display: none;
+  }
+  .bubble3{
+    display: none;
   }
 }
