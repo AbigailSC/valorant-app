@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
   // public idCharacter: string = '5f8d3a7f-467b-97f3-062c-13acf203c006';
-  private url = 'https://valorant-api.com/v1/agents';
+  private url = 'https://valorant-api.com/v1/agents?isPlayableCharacter=true';
 
   constructor(private http: HttpClient) {}
 
