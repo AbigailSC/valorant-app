@@ -5,10 +5,26 @@
     class="b-navbar__logo"
   />
   <h1 class="b-navbar__title"><span>valorant</span> App</h1>
-  <form class="b-navbar__form">
-    <input class="b-navbar__input" type="text" placeholder="Search character" />
-    <button class="b-navbar__btn">
-      <i class="fa-solid fa-magnifying-glass"></i>
-    </button>
-  </form>
+  <button class="b-navbar__btn" (click)="toggleMenu()">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+  <div class="b-navbar__ul" *ngIf="showList" [ngClass]="{ show: showList }">
+    <ul class="b-navbar__list">
+      <li class="b-navbar__item">
+        <a href="#" class="b-navbar__link">Home</a>
+      </li>
+      <div class="b-navbar__divider"></div>
+      <li class="b-navbar__item">
+        <a href="#" class="b-navbar__link">Maps</a>
+      </li>
+      <div class="b-navbar__divider"></div>
+      <li class="b-navbar__item">
+        <a href="#" class="b-navbar__link">Weapons</a>
+      </li>
+      <div class="b-navbar__divider"></div>
+      <li class="b-navbar__item">
+        <a href="#" class="b-navbar__link">About</a>
+      </li>
+    </ul>
+  </div>
 </nav>

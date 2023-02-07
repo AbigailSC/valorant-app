@@ -1,6 +1,9 @@
-<div class="container">
-  <ng-container *ngFor="let char of character">
-    <p>{{ char.displayName }}</p>
-    <img src="{{ char.displayIcon }}" alt="{{ char.displayName }}" />
+<div class="b-characters">
+  <h3>// Agents</h3>
+  <ng-container *ngFor="let char of character" class="b-characters__container">
+    <div class="b-character__card">
+      <p>{{ char.displayName }}</p>
+      <img src="{{ char.displayIcon }}" alt="{{ char.displayName }}" />
+    </div>
   </ng-container>
 </div>
